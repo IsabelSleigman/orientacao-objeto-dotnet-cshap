@@ -7,13 +7,19 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
-            Aluno p1 = new Aluno();
 
-            p1.Nome = "Isabel";
-            p1.Idade = 30;
-            p1.Nota = 10;
+            Calculadora calc = new Calculadora();
+            System.Console.WriteLine("Resultado da primeira soma: " + calc.Somar(10,20));
 
-            p1.Aprensentar();
+            System.Console.WriteLine("Resultado da segunda soma: " + calc.Somar(10,20,30));
+
+            // Aluno p1 = new Aluno();
+
+            // p1.Nome = "Isabel";
+            // p1.Idade = 30;
+            // p1.Nota = 10;
+            // p1.Documento = "123456";
+            // p1.Aprensentar();
 
 
 
