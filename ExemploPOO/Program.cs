@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using ExemploPOO.Helper;
 using ExemploPOO.Models;
 
 namespace ExemploPOO
@@ -7,10 +10,24 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
+            var caminho = "C:\\Users\\Isabel.sleigman\\source\\Bel\\Abstração\\orientacao-objeto-dotnet-cshap\\TrabalhoComArquivos";
+            var caminhoArquivo = Path.Combine(caminho, "Arquivo-teste-stream.txt");
+            var lista = new List<string>{"Linha 1", "Linha 2", "Linha 3"};
 
-            Computador comp = new Computador();
+            FileHelper helper = new FileHelper();
 
-            System.Console.WriteLine(comp.ToString());
+            //helper.ListarDiretorios(caminho);
+           // helper.CriarDiretorio(Path.Combine(caminho, "Pasta Teste 3", "SubPartaTeste3"));
+           //helper.ApagarDiretorio(caminho, true);
+           //helper.CriarArquivoTexto(caminhoArquivo, "Olá teste de escrita de arquivo");
+
+            helper.CriarArquivoTextoStream(caminhoArquivo, lista);
+
+
+
+            // Computador comp = new Computador();
+
+            // System.Console.WriteLine(comp.ToString());
 
             // Corrente c = new Corrente();
 
